@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betül Öztürk'ün Web Sitesi</title>
+    <title>İki Liste Yan Yana</title>
+    
+
+    <style>
+        .container {
+            display: flex; /* Flexbox kullan */
+            justify-content: space-between; /* Aralarına boşluk bırak */
+            gap: 20px; /* İki liste arasındaki boşluğu belirle */
+        }
+        ul {
+            list-style-type: none; /* Liste işaretlerini kaldır */
+            padding: 0;
+            margin: 0;
+            
+            padding: 10px;
+            border-radius: 5px;
+            width: 45%; /* Listelerin genişliğini belirle */
+        }
+        li {
+            padding: 5px;
+            
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: lightblue;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .form-container {
+            width: 350px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Label renkleri */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: darkblue; /* Label rengi */
+            font-weight: bold;
+        }
+
+        /* Input alanlarının stilleri */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #4CAF50; /* Kenarlık */
+            border-radius: 5px;
+            outline: none;
+            background: #e8f0fe; /* Arka plan rengi */
+            color: #333;
+        }
+
+        /* Input'a odaklanınca farklı renk */
+        input:focus, textarea:focus {
+            border-color: #ff9800;
+            background: #fff;
+        }
+
+        /* Gönder butonu */
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+   
+   <div style="background-image: url(arkaplan.jpg);">
+       <h1 style="text-align: center; padding: 100px; color: aliceblue;" >
+        Beetech Web eğitimi
+       </h1>
+   </div>
+    <h2 style="color: red;">HTML CSS NEDİR</h2>
+    <h3 style="color: blueviolet;">Web tasarımı, günümüzün en çok rağbet gören çalışma alanlarından biri olarak sürekli büyüyor. Teknolojinin hem profesyonel hem kişisel hayatlarla temasının zirveye taşındığı günümüzde, iki milyara yakın web sitesi tasarlandı. 
+        Bu sayı sürekli artarken, web tasarımcı olmak isteyenlerin sayısı da paralel olarak artmaya devam ediyor.</h3>
+    <div class="container">
+    <h3 style="color: black;">Sosyal Medya Hesapları</h3>
+        <ul style="list-style-type: square;"> 
+            <li> <a href="www.youtube.com">Youtube</a> </li>
+            <li><a href="www.instagram.com">İnstagram </a> </li>
+            <li><a href="www.facebook.com">Facebook</a> </li>
+        </ul>
+
+    <h3 style="color: black;">Sosyal Medya Hesapları</h3>
+        <ul style="list-style-type: circle;">
+            <li> <a href="www.udemy.com">Udemy</a></li>
+            <li><a href="www.tiktok.com">Tiktok </a> </li>
+            <li><a href="www.sahibinden.com">Sahibinden </a> </li>
+
+        </ul>
+    </div>
+
+    <h3 style="text-align: center;">Öğrenci Listesi</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Yaş</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ahmet</td>
+                <td>Yılmaz</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mehmet</td>
+                <td>Demir</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ayşe</td>
+                <td>Kaya</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Fatma</td>
+                <td>Şahin</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Burak</td>
+                <td>Arslan</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Elif</td>
+                <td>Çelik</td>
+                <td>23</td>
+    </table> <br><br><br>
+
+    <h2 style="text-align: center; color: blueviolet;">Bilgilerinizi Giriniz</h2>
+
+    <div class="form-container">
+        <h3 style="text-align: center; color: darkblue;">Kayıt Formu</h3>
+        <form>
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" placeholder="Adınızı girin" required>
+
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Mesajınızı yazın"></textarea>
+
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+
+
+
+</body>
+</html>
